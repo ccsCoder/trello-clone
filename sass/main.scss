@@ -1,0 +1,213 @@
+
+$font-stack: sans-serif;
+$font-size: 16px;
+
+$primary-color: #3F51B5;
+$primary-dark : #303F9F;
+$primary-light: #C5CAE9;
+$primary-text: #212121;
+$accent-color: #FF5722;
+$secondary-text: #757575;
+
+
+$swimlane-width: 20%;
+$swimlane-margin-left: 20px;
+$swimlane-margin-top: 20px;
+$swimlane-background: #e2e4e6;
+$swimlane-title-height: 30px;
+
+
+
+html,body {
+	font-size: $font-size;
+	font-family: $font-stack;
+	height:100%;
+	padding:0;
+	margin:0;
+}
+
+.max-height {
+	height: 100%;
+}
+
+.max-width {
+	width: 100%;
+}
+
+.container {
+	background-color: $primary-color;
+}
+
+.toolbar {
+	display:flex;
+	background-color: $primary-dark;
+	color: $accent-color;
+	text-align: center;
+	padding: 5px;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.title {
+	border-radius : 3px;
+	padding: 5px;
+	margin-left: 5px;
+	color: $primary-light;
+	font-size:1.5rem;
+
+}
+
+.toolbar-items {
+	@extend .title;
+	display: flex;
+	justify-content: right;
+	margin-right:5px;
+	cursor: pointer;
+}
+
+.toolbar-items > div {
+	border: 1px solid $primary-light;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.toolbar-items > div:hover {
+	color: $accent-color;
+}
+
+#swimlanes-container {
+	display:flex;
+	height: calc(100% - 100px);
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	overflow-x: auto;
+	overflow-y:none;
+
+}
+
+.swimlane {
+	display:flex;
+	flex-direction:column;
+	margin-top: $swimlane-margin-top;
+	width: $swimlane-width;
+	min-width:$swimlane-width;
+	margin-left: $swimlane-margin-left;
+	color: $primary-text;
+	border-radius: 5px ;
+}
+
+.swimlane-content {
+	background-color: $swimlane-background;
+	border-radius: 5px ;
+
+}
+
+.swimlane-title {
+	@extend .title;
+	font-size: 1rem;
+	color: $primary-dark;
+	font-weight:bold;
+	height: $swimlane-title-height;
+	border-bottom: $secondary-text;
+	padding-top: 10px;
+	cursor: pointer;
+
+}
+.swimlane-add-item {
+	margin-top: 10px;
+	font-size:0.9rem;
+	color: $accent-color;
+	cursor: pointer;
+	padding: 5px;
+}
+.swimlane-add-item:hover{
+	background-color: #FFFFFF;
+}
+
+
+.swimlane-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction:row;
+	flex-wrap:wrap;
+	background-color: white;
+	margin-top: 10px;
+	padding: 5px;
+	border: 1px solid gainsboro;
+}	
+
+.swimlane-item > .item-text{
+	width: 80%;	
+	font-size:0.9rem;
+}
+
+.swimlane-item > .edit-item {
+	padding: 2px;
+	cursor: pointer;
+	font-size: 0.7rem;
+	position: relative;
+	color: $accent-color;
+	top: -5px;
+
+}
+
+.swimlane-item-editor {
+	display: none;
+	margin-top: 15px;
+	padding: 15px;
+
+}
+
+.swimlane-item-editor > .swimlane-input-actions {
+	width:80%;
+	text-align: left;
+}
+
+ .swimlane-input-actions > button {
+ 	color: $accent-color;
+ }
+
+.swimlane-input-actions > :nth-child(2) {
+ 	margin-left:10px;
+ }
+
+
+.item-editor-input > input{
+	width: 80%;
+}
+
+
+
+
+/** scrollbars **/
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: $primary-dark;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+    border: 1px solid $primary-light;
+
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+
+/**
+Action classes
+*/
+
+.editing {
+	border: 1px dashed $accent-color;
+}
+
+
+
