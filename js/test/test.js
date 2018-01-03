@@ -25,13 +25,13 @@ function init() {
 	}];
 
 
-	var swimlaneController = new SwimlaneController();
-	swimlaneController.init();
-	swimlaneController.addSwimlane({"swimlane-title":"TO-DOs"});
-	swimlaneController.addSwimlane({"swimlane-title":"TO-DO-COl2"});
+	var trelloCloneController = new TrelloCloneController();
+	trelloCloneController.init();
+	trelloCloneController.addSwimlane({"swimlane-title":"TO-DOs"});
+	trelloCloneController.addSwimlane({"swimlane-title":"TO-DO-COl2"});
 
 	itemsData.forEach(function (itemData) {
-		swimlaneController.addItem(itemData.itemData, document.querySelector(itemData.selector));	
+		trelloCloneController.addItem(itemData.itemData, document.querySelector(itemData.selector));	
 	});
 
 

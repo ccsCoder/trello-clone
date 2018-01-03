@@ -15,6 +15,7 @@ $swimlane-margin-left: 20px;
 $swimlane-margin-top: 20px;
 $swimlane-background: #e2e4e6;
 $swimlane-title-height: 30px;
+$swimlane-drag-enter: "#8BC34A";
 
 
 
@@ -64,12 +65,11 @@ html,body {
 	justify-content: right;
 	margin-right:5px;
 	cursor: pointer;
+	font-size: 0.9rem;
 }
 
 .toolbar-items > div {
-	border: 1px solid $primary-light;
-	padding: 5px;
-	border-radius: 3px;
+	padding: 10px;
 }
 
 .toolbar-items > div:hover {
@@ -215,15 +215,15 @@ Action classes
 
 /** Dragging related classes **/
 .drag-start {
-	border: 1px solid red;
 	cursor: move;
-	opacity:0.4;
+	opacity:0.6;
+
 }
 
 .drag-enter {
-	border: 1px dashed green;
-	background-color: $primary-light;
-	opacity:0.6;
+	background-color: $swimlane-drag-enter;
+	opacity: 0.6;
+	padding-bottom: 20px;
 }
 
 

@@ -34,12 +34,11 @@ html, body {
   display: flex;
   justify-content: right;
   margin-right: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 0.9rem; }
 
 .toolbar-items > div {
-  border: 1px solid #C5CAE9;
-  padding: 5px;
-  border-radius: 3px; }
+  padding: 10px; }
 
 .toolbar-items > div:hover {
   color: #FF5722; }
@@ -153,13 +152,12 @@ Action classes
 
 /** Dragging related classes **/
 .drag-start {
-  border: 1px solid red;
   cursor: move;
-  opacity: 0.4; }
+  opacity: 0.6; }
 
 .drag-enter {
-  border: 1px dashed green;
-  background-color: #C5CAE9;
-  opacity: 0.6; }
+  background-color: "#8BC34A";
+  opacity: 0.6;
+  padding-bottom: 20px; }
 
 /*# sourceMappingURL=base.css.map */

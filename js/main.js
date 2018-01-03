@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function init() {
-	var swimlaneController = new SwimlaneController();
-	swimlaneController.init();
-	swimlaneController.addSwimlane({"swimlane-title":"TO-DOs"});
+	var trelloCloneController = new TrelloCloneController();
+	trelloCloneController.init();
+	trelloCloneController.addSwimlane({"swimlane-title":"TO-DOs"});
 }

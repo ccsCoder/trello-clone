@@ -1,3 +1,6 @@
+/**
+ * Not complete, but it's a start ...
+ */
 var DOMUtils = (function () {
 	var currElem;
 	
