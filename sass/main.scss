@@ -197,8 +197,8 @@ html,body {
 .footer > a {
 	margin-left: 15px; 
 	margin-right: 25px;
-	color: white ;
 	text-decoration: none;
+	color: $primary-light;
 	padding: 5px;
 	border-bottom: 2px dashed $primary-light;
 }
