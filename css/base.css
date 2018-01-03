@@ -14,7 +14,7 @@ html, body {
 .container {
   background-color: #3F51B5; }
 
-.toolbar {
+.toolbar, .footer {
   display: flex;
   background-color: #303F9F;
   color: #FF5722;
@@ -37,11 +37,15 @@ html, body {
   cursor: pointer;
   font-size: 0.9rem; }
 
-.toolbar-items > div {
+.toolbar-items > div, .toolbar-items a {
   padding: 10px; }
 
-.toolbar-items > div:hover {
+.toolbar-items > div:hover, .toolbar-items a:hover {
   color: #FF5722; }
+
+.toolbar-items a {
+  text-decoration: none;
+  color: #C5CAE9; }
 
 #swimlanes-container {
   display: flex;
@@ -129,6 +133,20 @@ html, body {
 
 .item-editor-input > input {
   width: 80%; }
+
+.footer {
+  height: 30px;
+  color: #C5CAE9;
+  justify-content: flex-start;
+  font-size: 0.9rem; }
+
+.footer > a {
+  margin-left: 15px;
+  margin-right: 25px;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-bottom: 2px dashed #C5CAE9; }
 
 /** scrollbars **/
 ::-webkit-scrollbar {

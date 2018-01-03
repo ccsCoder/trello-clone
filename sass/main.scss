@@ -47,7 +47,6 @@ html,body {
 	padding: 5px;
 	justify-content: space-between;
 	align-items: center;
-
 }
 
 .title {
@@ -68,12 +67,17 @@ html,body {
 	font-size: 0.9rem;
 }
 
-.toolbar-items > div {
+.toolbar-items > div,.toolbar-items a {
 	padding: 10px;
 }
 
-.toolbar-items > div:hover {
+.toolbar-items > div:hover,.toolbar-items a:hover {
 	color: $accent-color;
+}
+
+.toolbar-items  a {
+	text-decoration: none;
+	color: $primary-light;
 }
 
 #swimlanes-container {
@@ -183,6 +187,21 @@ html,body {
 	width: 80%;
 }
 
+.footer {
+	@extend .toolbar;
+	height: 30px;
+	color: $primary-light;
+	justify-content: flex-start;
+	font-size: 0.9rem;
+}
+.footer > a {
+	margin-left: 15px; 
+	margin-right: 25px;
+	color: white ;
+	text-decoration: none;
+	padding: 5px;
+	border-bottom: 2px dashed $primary-light;
+}
 
 
 
