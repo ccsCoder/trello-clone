@@ -37,10 +37,12 @@ var DOMUtils = (function () {
 
 	function _on(eventName, handler, context) {
 		currElem.addEventListener(eventName, (context ? handler.bind(context): handler));
+		return this;
 	};
 
 	function _off(eventName, handler) {
 		currElem.removeEventListener(eventName, handler);
+		return this;
 	};
 
 	function _append(htmlString) {
@@ -62,6 +64,16 @@ var DOMUtils = (function () {
 		return this;
 	};
 
+	function _getDOMObject(htmlString) {
+		var tempDiv = document.createElement("div");
+		tempDiv.innerHTML = htmlString;
+		return tempDiv.firstChild;
+	};
+
+	function _hasClass(className) {
+		return currElem.classList.contains(className);
+	}
+
 	return {
 		get: _get,
 		getIn: _getIn,
@@ -74,7 +86,9 @@ var DOMUtils = (function () {
 		append: _append,
 		strip: _strip,
 		wrap: _wrap,
-		css: _css
+		css: _css,
+		createNode: _getDOMObject,
+		hasClass: _hasClass
 
 	}
 })();

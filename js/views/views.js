@@ -24,11 +24,9 @@ var ViewFactory = (function () {
 
 	function _createView(viewName, viewData) {
 		var str= _bind(views[viewName], viewData); 
-		//hack to create dom NODE object from these huge string easily
-		var tempDiv = document.createElement("div");
-		tempDiv.innerHTML = str;
-
-		return tempDiv.firstChild;
+		
+		return DOMUtils.createNode(str);
+		
 	};
 
 	return {

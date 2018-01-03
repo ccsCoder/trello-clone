@@ -126,6 +126,9 @@ html,body {
 	background-color: #FFFFFF;
 }
 
+.swimlane-items {
+	padding: 5px;
+}
 
 .swimlane-item {
 	display: flex;
@@ -142,6 +145,7 @@ html,body {
 .swimlane-item > .item-text{
 	width: 80%;	
 	font-size:0.9rem;
+	word-wrap: break-word;
 }
 
 .swimlane-item > .edit-item {
@@ -209,5 +213,17 @@ Action classes
 	border: 1px dashed $accent-color;
 }
 
+/** Dragging related classes **/
+.drag-start {
+	border: 1px solid red;
+	cursor: move;
+	opacity:0.4;
+}
+
+.drag-enter {
+	border: 1px dashed green;
+	background-color: $primary-light;
+	opacity:0.6;
+}
 
 
